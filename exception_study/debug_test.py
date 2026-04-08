@@ -1,5 +1,4 @@
 # 张贴复制格式没解决，把每个部分改成方法或类
-from operator import truediv
 
 
 def study_basic_exception():
@@ -13,7 +12,7 @@ def study_basic_exception():
    # except ValueError:
    #     print("error:not a valid number")  # 用户输入a
    # except Exception as e:
-   #     print(f"unkown error:{e}")
+   #     print(f"unknown error:{e}")
 
 
 def study_muffled_class():
@@ -63,13 +62,13 @@ def exception_handing():
             y = int(y)
             print(x/y)
         except ZeroDivisionError:
-            print("exist zeroerror,skipped")
+            print("exist zero error,skipped")
         except ValueError:
             print("exist value error，skipped")
         except TypeError:
             print("type error,skipped")
         except Exception as e:
-            print(f"unkown error:{e}")
+            print(f"unknown error:{e}")
 
 
 def exception_cycle():
@@ -89,8 +88,8 @@ def exception_cycle():
 
 def exception_more_function():
     #1.替代if/else，代码可读性提高
-    #2.提高效率，直接查询键，except keyerror
-    #3.直接访问属性，except attributeerror
+    #2.提高效率，直接查询键，except Key error
+    #3.直接访问属性，except attribute error
     #4.添加finally，清除数据（注意，赋值失败即从未存在）
     x = None #防止赋值失败，导致del x 失效
     try:
@@ -103,7 +102,7 @@ def exception_more_function():
 
 import warnings
 def exception_warning():
-    #尝试使用warn和filerwarn,并使用try捕获warning
+    #尝试使用warn和filterwarnings,并使用try捕获warning
     try:
         #warnings.warn('THIS function is too old', DeprecationWarning)
         warnings.filterwarnings('error', category=DeprecationWarning)
@@ -151,7 +150,7 @@ if __name__=="__main__":
 # except ValueError:
 #     print("error:not a valid number")#用户输入a
 # except Exception as e:
-#     print(f"unkown error:{e}")
+#     print(f"unknown error:{e}")
 #
 # #启用抑制功能
 # class muffled:
